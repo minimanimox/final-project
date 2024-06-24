@@ -7,8 +7,9 @@
 }
 
 body {
-    /* height 적용해도 main에서 100%가 먹히지 않음 */
-    height: 1400px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 nav {
@@ -36,64 +37,120 @@ nav ul li {
 
 nav ul li a:link,
 nav ul li a:visited {
-    color: rgb(160, 225, 243);
+    color: white;
 }
 
 nav ul li a:hover {
-    color: rgb(229, 145, 0);
+    color: rgb(196, 188, 247);
 }
 
 nav ul li a:active {
-    color: rgb(92, 229, 0);
+    color: rgb(45, 31, 103);
 }
 
-/* 확인필요 */
 #current-page {
-    color: aquamarine;
+    color: rgb(131, 101, 251);
 }
 
 header {
-    background: green;
+    background: rgb(229, 229, 229);
     width: 100%;
-    height: 80px;
-    text-align: center;
-
+    height: 100px;
+    text-align: right;
 }
 
+header > p {
+    font-weight: bold;
+    font-size: 50pt;
+    padding-right: 10px;
+}
+
+/*main and aside should be in one container(parent) to set their position*/
 .main-part {
-    font-size: 0;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    gap: 1em;
+    padding: 1em;
+    background: rgb(229, 229, 229);
+    font-size: initial;
 }
+
 
 main {
-    width: 100%;
-    height: 700px;
-    display: inline-block;
-    background: yellow;
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    gap: 1em;
+    padding: 1em;
+    background: rgb(229, 229, 229);
     font-size: initial;
 }
 
 main.with-side {
-    width: 80%;
-    height: 700px;
-    display: inline-block;
+    flex: 3;
     background: yellow;
-    font-size: initial;
+}
+
+main > p {
+    font-weight: bold;
+    font-size: 200pt;
+}
+
+.image-container {
+    display: inline-block;
+    text-align: center;
+}
+
+.image-container img {
+    display: inline-block;
+    margin: 0 10px;
+    width: 200px; /* Adjust the width as needed */
+    vertical-align: top;
+}
+
+picture.home-pic-first > img {
+    float: left;
+    width: 500px;
+    height: 500px;
+    margin-top: 50px;
+    margin-left: 30px;
+    margin-right: 20px;
+}
+
+picture.home-pic-second > img {
+    float: left;
+    width: 230px;
+    height: 230px;
+    margin-top: 70px;
+    margin-left: 30px;
+    margin-right: 20px;
+}
+
+picture.home-pic-third > img {
+    float: right;
+    width: 600px;
+    height: 600px;
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-right: 20px;
 }
 
 aside {
-    width: 20%;
-    height: 700px;
-    display: inline-block;
+    flex: 1;
+    /*display: inline-block;*/
     background: orange;
     font-size: initial;
 }
 
+/* Footer should stick to the bottom */
 footer {
+    margin-top: auto;
     padding: 10px 10px;
-    background: red;
+    background: #1f1f1f;
     text-align: center;
     width: 100%;
-    height: 80px;
+    height: 100px;
 }
 
 footer ul {
@@ -108,4 +165,44 @@ footer ul li {
 footer p {
     color: #fff;
     display: block;
+}
+
+footer .line {
+    border-top: 1px solid #ccc;
+    width: 80%; /* 선의 길이를 50%로 설정 */
+    margin: 20px auto; /* 가운데 정렬 */
+}
+
+
+ul li a:link,
+ul li a:visited {
+    color: rgb(160, 225, 243);
+}
+
+ul li a:hover {
+    color: rgb(229, 145, 0);
+}
+
+ul li a:active {
+    color: rgb(92, 229, 0);
+}
+
+
+/*Floating Back-To-Top Button*/
+#myBtn {
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 10px;
+    left: calc(100% - 40px); /* button position */
+    max-width: 30px;
+    width: 100%;
+    font-size: 12px;
+    border-color: rgba(85, 85, 85, 0.2);
+    background-color: rgb(100, 100, 100);
+    padding: .5px;
+    border-radius: 4px;
+}
+
+#myBtn:hover {
+    background-color: #7dbbf1;
 }

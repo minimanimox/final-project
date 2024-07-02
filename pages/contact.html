@@ -3,16 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../style-contact.css">
     <title>[CONTACTS] EVERYDAY PASTA</title>
 </head>
 <body>
     <nav>
-        <span class="spacer"></span>
         <ul>                    
             <li><a href="../index.html">Home</a></li>
-            <li><a href="./about.html">About</a></li>
-            <li><a href="./recipe.html">Recipe</a></li>
+            <li><a href="./about.html">About Pasta</a></li>
+            <li><a href="./recipe.html">Recipes</a></li>
             <li><a href="#" id="current-page">Contact</a></li>
         </ul>
     </nav>
@@ -21,26 +20,60 @@
         <p>CONTACTS</p>
     </header>
 
-    <div class="main-part">
-        <main class="with-side">
-            <p>this is main</p>
-        </main>
-    
-        <aside>
-            <p>this is aside bar</p>
-        </aside>
+    <div class="container">
+        <div class="image-section">
+            <img src="../assets/pic/lemonpng.png" alt="Lemon pasta image">
         </div>
+        
+        
+        <div class="form-section">
+            <h2>Contact Us</h2>
+            <form id="contact-form" action="/submit-path" method="post">
+                <div class="form-group">
+                    <label for="name-input">Full Name</label>
+                    <input type="text" id="name-input" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email-input">E-mail</label>
+                    <input type="email" id="email-input" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message-input">Message</label>
+                    <input type="text" id="message-input" name="message">
+                    </div>
+                <div class="form-group">
+                    <button type="submit">Send</button>
+                </div>
+            </form>    
+            <div class="form-right">    
+                <div class="contact-info">
+                    <p><strong>Contact info</strong></p>
+                    <p>yummygreencurry@gmail.com</p>
+                </div>
+                <div class="based-info">    
+                    <p><strong>Based in</strong></p>
+                    <p>British Columbia</p> 
+                    <p>Canada</p>
+                </div>
+                <div class="social-media">
+                    <a href="https://facebook.com"><img src="../assets/pic/1.png" alt="Facebook link"></a>
+                    <a href="https://instagram.com"><img src="../assets/pic/2.png" alt="Instagram link"></a>
+                    <a href="https://twitter.com"><img src="../assets/pic/3.png" alt="Twitter link"></a>
+                </div>
+            </div>
+        </div>
+    </div>
 
-        <footer>
-            <ul>
-                <li><a href="" aria-label="Go to FAQ page">FAQ</a></li>
-                <li><a href="" aria-label="Go to Terms page">Terms</a></li>
-                <li><a href="" aria-label="Go to Privacy page">Privacy</a></li>
-                <li id="last-item"><a href="" aria-label="Go to Cookies page">Cookies</a></li>
-            </ul>
-            <div class="line"></div>
-            <p>&copy; 2024 My Webpage</p>
-        </footer>
+    <footer class="normal">
+        <ul>
+            <li><a href="" aria-label="Go to FAQ page">FAQ</a></li>
+            <li><a href="" aria-label="Go to Terms page">Terms</a></li>
+            <li><a href="" aria-label="Go to Privacy page">Privacy</a></li>
+            <li id="last-item"><a href="" aria-label="Go to Cookies page">Cookies</a></li>
+        </ul>
+        <div class="line"></div>
+        <p>&copy; 2024 My Webpage</p>
+    </footer>
 
     <button id="myBtn"><a href="#top" style="color: white">Top</a></button>
 </body>

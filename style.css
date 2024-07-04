@@ -117,10 +117,10 @@ main {
     margin: 0;
     padding: 0;
     height: 100vh; /* Viewport height */
-    background-image: url('./assets/pic/bbbPasta.jpg'); /* 배경 이미지 설정 */
-    background-size: cover; /* 이미지 크기를 컨테이너에 맞춤 */
-    background-position: center; /* 이미지의 중앙을 기준으로 배치 */
-    background-repeat: no-repeat; /* 이미지 반복 금지 */
+    background-image: url('./assets/pic/bbbPasta.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
 }
 
 main {
@@ -135,8 +135,8 @@ main p {
 }
 
 .main-container img {
-    width: 100%; /* 컨테이너 너비에 맞게 조절 */
-    height: auto; /* 비율 유지 */
+    width: 100%; 
+    height: auto;
 }
 
 .image-container {
@@ -147,7 +147,7 @@ main p {
 .image-container img {
     display: inline-block;
     margin: 0 10px;
-    width: 200px; /* Adjust the width as needed */
+    width: 200px; 
     vertical-align: top;
 }
 
@@ -162,7 +162,7 @@ main p {
 
 aside {
     position: fixed;
-    background-color: rgba(0, 0, 0, 0.5); /* 반투명 배경 색상 */
+    background-color: rgba(0, 0, 0, 0.5); /* translucent */
     font-size: initial;
     padding: 20px;
     line-height: 2;

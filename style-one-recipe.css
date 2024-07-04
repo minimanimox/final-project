@@ -1,13 +1,12 @@
-/* this css file is for recipe page to exchange all inline-blocks to flexboxes */
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     text-decoration: none;
-    list-style: none;
-    font-family: "Montserrat"
+    font-family: "Montserrat";
 }
 
 body {
@@ -22,10 +21,6 @@ nav {
     padding: 32px 32px;
     min-height: 80px;
     background: #1f1f1f;
-}
-
-nav > a {
-    vertical-align: bottom;
 }
 
 nav ul,
@@ -64,58 +59,143 @@ header {
     padding-right: 50px;
 }
 
-header > p {
+header p {
     font-weight: bold;
     font-size: 90pt;
     padding-left: 30px;
     color: rgb(235, 234, 234);
 }
 
-.page-header {
-    width: 100%;
-    background:#1f1f1f;
-}
-
-#find{
-    text-align: right;
-    font-weight: bold;
-    font-size: 60pt;
-    padding-right: 50px;
-    color: rgb(153, 152, 152);
-}
-
 .main-part {
     display: flex;
+    justify-content: center;
+    width: 100%;
 }
 
 main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
-    font-size: initial;
+    width: 80%;
+    background-color: white;
+    color: black;
+    padding: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.middle-bar { 
+main h2 {
+    font-size: 50pt;
+    padding: 20px;
+    background: rgb(249, 197, 83);
+    font-family: "Permanent Marker", cursive;
+}
+
+main h3 {
+    font-size: 25pt;
+    padding: 70px;
+}
+
+.recipe-header {
     width: 100%;
-    height: 250px;
-    background-color: rgb(250, 237, 184);
-    padding: 50px;
-}
-
-.middle-bar h3 {
-    font-size: 20pt;
     text-align: center;
-    color: rgb(34, 34, 34);
 }
 
-.middle-in {
-    padding: 50px;
+.recipe-header img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
 }
 
-.middle-bar p {
-    font-size: 13pt;
+.author {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0;
+    flex-direction: column; 
+}
+
+.author img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.summary {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 70px 0;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+.summary div {
     text-align: center;
+}
+
+.summary h4 {
+    font-size: 18pt;
+}
+
+.summary p {
+    font-size: 15pt;
+}
+
+.ingredients, .instructions {
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.ingredients h2, .instructions h2 {
+    font-size: 22pt;
+    margin: 20px 0;
+}
+
+.ingredients ul, .instructions ol {
+    margin-left: 50px;
+    font-size: 15pt;
+}
+
+.ingredients ul li,
+.instructions ol li {
+    padding: 5px;
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.actions button {
+    background-color: #ffcc00;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+    margin-bottom: 50px;
+    font-weight: bold;
+}
+
+button a:link,
+ul li a:visited {
+    color: rgb(250, 237, 184);
+}
+
+button a:hover {
+    color: white;
+}
+
+button a:active {
+    color:rgb(31, 49, 244);
 }
 
 footer.normal {
@@ -181,60 +261,4 @@ ul li a:active {
 
 #myBtn:hover {
     background-color: #7dbbf1;
-}
-
-.dropdown {
-    position: relative;
-    display: inline-block;
-    width: 100%;
-}
-
-.dropdown ul li {
-    position: relative; /* 자식 요소의 위치를 조정하기 위해 설정 */
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    top: 100%; /* 부모 요소 아래에 위치 */
-    left: 0;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    padding: 12px 16px;
-    z-index: 1;
-}
-
-.dropdown ul li:hover .dropdown-content {
-    display: block;
-}
-
-main ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: center; /* 자식 요소들을 중앙에 정렬 */
-    display: block; /* 텍스트 정렬이 적용되도록 블록 요소로 설정 */
-}
-
-main ul li {
-    display: inline-block;
-    display: inline-block; /* 인라인 블록 요소로 설정 */
-    text-align: center; /* 자식 요소를 중앙에 정렬 */
-    width: 320px; /* 원하는 너비로 설정 */
-    vertical-align: middle; /* 수직 정렬을 위해 middle로 설정 */
-}
-
-main ul li a {
-    display: inline-block; /* 인라인 블록 요소로 설정 */
-    text-align: center; /* 자식 요소를 중앙에 정렬 */
-    width: 100%; /* 부모 요소의 너비를 채우도록 설정 */
-}
-
-ul li img {
-    display: inline-block;
-    width: 300px;
-    border-radius: 70px;
-    padding: 20px;
-    align-items: center;
 }

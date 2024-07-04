@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap');
 * {
     box-sizing: border-box;
@@ -59,7 +59,7 @@ header {
     text-align: left;
 }
 
-header > p {
+header p {
     font-weight: bold;
     font-size: 90pt;
     padding-left: 30px;
@@ -71,12 +71,46 @@ header > p {
     background:#1f1f1f;
 }
 
-#about{
-    text-align: right;
-    font-weight: bold;
-    font-size: 90pt;
-    padding-right: 50px;
-    color: rgb(235, 234, 234);
+main {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+}
+
+.description {
+    display: block;
+    width: 80%;
+    background-color: rgb(250, 247, 237);
+    color: black;
+    padding: 20px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    text-align: justify;
+}
+
+.description p {
+    color: rgb(246, 170, 6);
+    font-size: 20px;
+    text-align: center;
+    padding-top: 110px;
+    padding-left: 90px;
+    line-height: 2;
+    font-family: "Playfair Display", serif;
+}
+
+.description p:first-letter {  
+    font-size: 60px;  
+}  
+
+.description img {
+    float: right;
+    width: 500px;
+    padding: 50px;
+    border-radius: 160px;
 }
 
 .main-body {
@@ -89,28 +123,10 @@ header > p {
     background-repeat: no-repeat; /* 이미지 반복 금지 */
 }
 
-/*main and aside should be in one container(parent) to set their position
-.main-part {
-    display: flex;
-    flex: 1;
-    flex-direction: row;
-    gap: 1em;
-    padding: 1em;
-    font-size: initial;
-}
-*/
-
 main {
-    /* display: flex; */
-    flex: 1;
-    flex-direction: row;
-    gap: 1em;
-    padding: 1em;
+    padding-left: 50px;
+    padding-right: 80px;
     font-size: initial;
-}
-
-main.with-side {
-    background: rgb(103, 103, 102);
 }
 
 .main-container img {
@@ -131,24 +147,17 @@ main.with-side {
 }
 
 #typesOfPasta {
+    padding-top: 50px;
     padding-left: 20px;
-    padding-bottom: 20px;
-    font-size: 30pt;
+    padding-bottom: 70px;
+    font-size: 50pt;
     font-weight: bold;
-
-}
-
-.description-about {
-    padding: 0px 140px 10px 20px;
-    color: #ccc;
-    font-size: 15pt;
-    text-indent: 10px;
-    text-align: justify;
+    color: rgb(249, 197, 83);
 }
 
 aside {
     position: fixed;
-    background: rgb(62, 62, 61);
+    background-color: rgba(0, 0, 0, 0.5); /* 반투명 배경 색상 */
     font-size: initial;
     padding: 20px;
     line-height: 2;
@@ -156,6 +165,11 @@ aside {
     top: 254px;
     right: 0;
     overflow-y: auto;
+}
+
+aside h3 {
+    color: white;
+    text-align: center;
 }
 
 footer.normal {
@@ -249,11 +263,6 @@ ul li a:active {
     display: block;
 }
 
-/* Table Styles */
-.table-wrapper {
-    margin: 10px 140px 10px 10px;
-}
-
 table {
     border-radius: 5px;
     font-size: 16px;
@@ -270,6 +279,7 @@ table {
     border-radius: 12px; /* round shape */
     overflow: hidden;
     background-color: white;
+    width: 1250px;
 }
 
 caption {
@@ -277,10 +287,6 @@ caption {
     margin: 14px 0px;
     font-size: 14px;
     font-style: italic;
-}
-
-.rounded-table th {
-    color:#365acf;
 }
 
 .rounded-table td,
@@ -294,7 +300,7 @@ caption {
   /* Color Table Headers */
 .rounded-table thead th {
     color: #505050;
-    background: #f2f59e;
+    background: rgb(249, 197, 83);
 }
 
   /* 첫 번째 행의 왼쪽 상단 및 오른쪽 상단 모서리 둥글게 */

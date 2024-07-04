@@ -3,15 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../style-recipe.css">
-    <title>[RECIPE] Prawn pasta</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap');
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            text-decoration: none;
+            list-style: none;
+            font-family: "Montserrat"
+        }
+
+        body {
+            display: flex;
+            min-height: 100vh;
+            background-color: #1f1f1f;
+            flex-direction: column;
+        }
+
+        nav {
+            display: flex;
+            padding: 32px 32px;
+            min-height: 80px;
+            background: #1f1f1f;
+        }
+
+        nav > a {
+            vertical-align: bottom;
+        }
+
+        nav ul,
+        nav ul li {
+            display: inline-block;
+        }
+
+        nav ul {
+            margin-bottom: 25px;
+        }
+
+        nav ul li {
+            margin-right: 20px;
+        }
+
+        nav ul li a:link,
+        nav ul li a:visited {
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: rgb(196, 188, 247);
+        }
+
+        nav ul li a:active {
+            color: rgb(45, 31, 103);
+        }
+
+        #current-page {
+            color: rgb(131, 101, 251);
+        }
+
+        header {
+            width: 100%;
+            text-align: right;
+            padding-right: 50px;
+        }
+
+        header p {
+            font-weight: bold;
+            font-size: 90pt;
+            padding-left: 30px;
+            color: rgb(235, 234, 234);
+        }
+
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            font-size: initial;
+        }
+
+        main ul {
+            list-style: none; /* 기본 목록 스타일 제거 */
+            padding: 0;
+            margin: 0;
+            display: flex; /* 가로 정렬을 위해 flexbox 사용 */
+            gap: 5px; 
+        }
+
+        main ul li {
+            display: inline-block;
+        }
+
+        main ul li a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        ul li img {
+            width: 300px;
+        }
+
+        footer.normal {
+            display: flex;
+            left: 0;
+            bottom: 0;
+            padding: 10px 10px;
+            background: #1f1f1f;
+            text-align: center;
+            width: 100%;
+            height: 100px;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        footer ul {
+            text-align: center;
+        }
+
+        footer ul li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        footer p {
+            color: #fff;
+            display: block;
+        }
+
+        footer .line {
+            border-top: 1px solid #ccc;
+            width: 80%; /* 선의 길이를 50%로 설정 */
+            margin: 20px auto; /* 가운데 정렬 */
+        }
+
+        ul li a:link,
+        ul li a:visited {
+            color: rgb(250, 237, 184);
+        }
+
+        ul li a:hover {
+            color: white;
+        }
+
+        ul li a:active {
+            color:rgb(45, 31, 103);
+        }
+
+        /*Floating Back-To-Top Button*/
+        #myBtn {
+            position: -webkit-sticky;
+            position: sticky;
+            bottom: 10px;
+            left: calc(100% - 40px); /* button position */
+            max-width: 30px;
+            width: 100%;
+            font-size: 12px;
+            border-color: rgba(85, 85, 85, 0.2);
+            background-color: rgb(100, 100, 100);
+            padding: .5px;
+            border-radius: 4px;
+        }
+
+        #myBtn:hover {
+            background-color: #7dbbf1;
+        }
+    </style>
+    <title>[RECIPE] ONE POT CREAMY PESTO CHICKEN PASTA</title>
 </head>
 <body>
     <nav>
         <ul>                    
             <li><a href="../index.html">Home</a></li>
-            <li><a href="./about.html">About Pasta</a></li>
-            <li><a href="#" id="current-page">Recipes</a></li>
+            <li><a href="./types.html">Types of Pasta</a></li>
+            <li><a href="./recipe.html">Recipes</a></li>
             <li id="last-item"><a href="./contact.html">Contact</a></li>
         </ul>
     </nav>
@@ -22,13 +188,15 @@
 
     <div class="main-part">
     <main>
-        <h2>Prawn pasta</h2>
-        <p id="find">Find the recipe inspiration you need here for your next meal.</p>
+        <h2>ONE POT CREAMY PESTO CHICKEN PASTA</h2>
         <ul>                    
-            <li><a href=".egg.html">Cream with egg yolk</a></li>
-            <li><a href="#" id="current-page">Prawn pasta</a></li>
-            <li><a href="./mushroom.html">Mushroom pasta</a></li>
-            <li id="last-item"><a href="./gnocchi.html">Gnocchi</a></li>
+            <li><a href="#" id="current-page">ONE POT CREAMY PESTO CHICKEN PASTA</a></li>
+            <li><a href="./shirimp.html"><img src="../assets/pic/Pesto-Shrimp-Pasta-V1.jpg" alt="PESTO SHRIMP PASTA"></a></li>
+            <li><a href="./vegie.html"><img src="../assets/pic/Quick-Veggie-Pasta-V1-1152x1536.webp" alt="QUICK VEGGIE PASTA"></a></li>
+            <li><a href="./broccoli.html"><img src="../assets/pic/Broccoli-Pasta-Salad-with-Tomato-Vinaigrette-close.jpg" alt="
+                BROCCOLI PASTA SALAD WITH TOMATO VINAIGRETTE"></a></li>
+            <li id="last-item"><a href="./parmesan-meatball.html"><img src="../assets/pic/Chicken-Parmesan-Meatballs-bowl-V1.jpg" alt="
+                CHICKEN PARMESAN MEATBALLS"></a></li>
         </ul>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate quas, ullam possimus temporibus magnam ut? Natus suscipit necessitatibus facere quod possimus minus est nobis labore qui, quos optio laborum modi.</p>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate quas, ullam possimus temporibus magnam ut? Natus suscipit necessitatibus facere quod possimus minus est nobis labore qui, quos optio laborum modi.</p>

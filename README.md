@@ -1,4 +1,4 @@
-# Pasta Web Page Project
+# Final Web Page Project
 
 ## Introduction
 
@@ -9,7 +9,7 @@ This project, created by Mina Lee for the final project, demonstrates the applic
 The web page is structured as follows:
 
 - **index.html**: The main page that provides an overview of the website.
-- **types-of-pasta.html**: A page that describes different types of pasta, including their shapes and descriptions.
+- **types.html**: A page that describes different types of pasta, including their shapes and descriptions.
 - **recipe.html**: A page that features recipes for five different pasta dishes, including ingredients, preparation methods, and accompanying photos.
 - **contact.html**: A page designed to allow visitors to get in touch.
 

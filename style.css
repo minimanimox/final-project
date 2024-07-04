@@ -124,9 +124,14 @@ main {
 }
 
 main {
-    padding-left: 50px;
-    padding-right: 80px;
     font-size: initial;
+}
+
+main p {
+    display: block;
+    padding-top: 400px;
+    padding-left: 1100px;
+    font-family: "Playfair Display", serif;
 }
 
 .main-container img {
@@ -208,8 +213,8 @@ footer p {
 
 footer .line {
     border-top: 1px solid #ccc;
-    width: 80%; /* 선의 길이를 50%로 설정 */
-    margin: 20px auto; /* 가운데 정렬 */
+    width: 80%; 
+    margin: 20px auto; 
 }
 
 ul li a:link,

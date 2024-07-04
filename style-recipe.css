@@ -99,6 +99,8 @@ main {
 .middle-bar { 
     width: 100%;
     height: 250px;
+    box-sizing: border-box;
+    border: none;
     background-color: rgb(250, 237, 184);
     padding: 50px;
 }
@@ -187,16 +189,17 @@ ul li a:active {
     position: relative;
     display: inline-block;
     width: 100%;
+    padding-bottom: 50px;   
 }
 
 .dropdown ul li {
-    position: relative; /* 자식 요소의 위치를 조정하기 위해 설정 */
+    position: relative; /* adjusting child elements */
 }
 
 .dropdown-content {
     display: none;
     position: absolute;
-    top: 100%; /* 부모 요소 아래에 위치 */
+    top: 100%; /* positioning under parents */
     left: 0;
     background-color: #f9f9f9;
     min-width: 160px;
@@ -213,22 +216,21 @@ main ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    text-align: center; /* 자식 요소들을 중앙에 정렬 */
-    display: block; /* 텍스트 정렬이 적용되도록 블록 요소로 설정 */
+    text-align: center; 
+    display: block; 
 }
 
 main ul li {
     display: inline-block;
-    display: inline-block; /* 인라인 블록 요소로 설정 */
-    text-align: center; /* 자식 요소를 중앙에 정렬 */
-    width: 320px; /* 원하는 너비로 설정 */
-    vertical-align: middle; /* 수직 정렬을 위해 middle로 설정 */
+    text-align: center; 
+    width: 320px; 
+    vertical-align: middle; 
 }
 
 main ul li a {
-    display: inline-block; /* 인라인 블록 요소로 설정 */
-    text-align: center; /* 자식 요소를 중앙에 정렬 */
-    width: 100%; /* 부모 요소의 너비를 채우도록 설정 */
+    display: inline-block; 
+    text-align: center; 
+    width: 100%; 
 }
 
 ul li img {
